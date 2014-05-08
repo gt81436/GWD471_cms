@@ -2,5 +2,11 @@
 #about .about_link,
 #contact .contact_link{
   color:red;
-
 }
+label {display:block;}
+.errors {display:block; color:red;}
+.product {width:200px; border:medium; padding:15px; float:left;}
+.product img {width: 170px; height:80px; background:#ccc;}
+.clear {clear:both;}
+
+label, textarea, input {display:block;}
