@@ -10,3 +10,5 @@ label {display:block;}
 .clear {clear:both;}
 
 label, textarea, input {display:block;}
+.img1 {width:380px; height:280px; display:block; float:left;}
+.img2 {width:380px; height:280px; display:block; float:right;}

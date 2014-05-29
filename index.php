@@ -1,11 +1,41 @@
+  <?php require_once('../../config.php');?>
   <?php $page_id = 'home'; ?>
+
+  <?php 
+      //get all content related to the selected page
+      $sql = "
+      SELECT *
+      FROM site_content
+      WHERE page_name='home'";
+
+      $myData = $db->query($sql);
+
+      //create container for each piece of data
+      while($row = $myData->fetch_assoc())
+      {
+        if($row['section_name'] === 'blurb')
+        {
+          $blurb = $row['content'];
+        }
+
+        if($row['section_name'] === 'intro')
+        {
+          $intro = $row['content'];
+        }
+      }
+  ?>
+
   <?php require_once('includes/top.php');?>
   <?php require_once('includes/header.php');?>
     <section>
     	<h2>Intro</h2>
+        <img class='img1' src="images/kobe.jpg" alt="Kobe Bryant!" />
+        <img class='img2' src="images/kevin.jpg" alt="Kevin Durant!" />
         <p>
-        <img src="images/kobe.jpg" alt="my pic" />
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis purus, pharetra eu ante nec, sollicitudin interdum tortor. Suspendisse in dui lectus. In in eros felis. Suspendisse euismod neque non bibendum fringilla. Cras aliquam, arcu ut ultrices venenatis, ipsum sem suscipit odio, iaculis viverra dolor ante eu nunc. Pellentesque tempor ipsum ut tempor cursus. Integer in ligula varius dolor pellentesque luctus et vitae est. Sed imperdiet massa metus. Mauris malesuada tristique purus non fermentum. Praesent mattis eros et ornare congue. 
+          <?php echo $intro ?>
+        </p>
+        <p>
+         <?php echo $intro ?>
         </p>
     </section>
     

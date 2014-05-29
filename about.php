@@ -1,10 +1,34 @@
   <?php $page_id = 'about'; ?>
   <?php require_once('../../config.php');?>
-  <?php
+  <?php 
+      //get all content related to the selected page
+      $sql = "
+      SELECT *
+      FROM site_content
+      WHERE page_name='about'";
+
+      $myData = $db->query($sql);
+
+      //create container for each piece of data
+      while($row = $myData->fetch_assoc())
+      {
+        if($row['section_name'] === 'blurb')
+        {
+          $blurb = $row['content'];
+        }
+
+        if($row['section_name'] === 'intro')
+        {
+          $intro = $row['content'];
+        }
+      }
+  ?>
+
+<?php
   //interact with DB
   $sql = 'SELECT * FROM media';
 
-  //send coomand to MySQL
+  //send command to MySQL
   $myData = $db->query($sql)
   OR exit('unable to select data from table');
 
@@ -30,9 +54,16 @@
     echo '<br class="clear" />';
     echo '</div>'
   ?>
-        <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc felis purus, pharetra eu ante nec, sollicitudin interdum tortor. Suspendisse in dui lectus. In in eros felis. Suspendisse euismod neque non bibendum fringilla. Cras aliquam, arcu ut ultrices venenatis, ipsum sem suscipit odio, iaculis viverra dolor ante eu nunc. Pellentesque tempor ipsum ut tempor cursus. Integer in ligula varius dolor pellentesque luctus et vitae est. Sed imperdiet massa metus. Mauris malesuada tristique purus non fermentum. Praesent mattis eros et ornare congue. 
-        </p>
+      
+  
+      
+      
+      <p>
+        <?php echo $intro ?>
+      </p>
+      <p>
+        <?php echo $blurb ?>
+      </p>
     </section>
     
   <?php require_once('includes/footer.php');?>

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>George Trammell Media</title>
+<title>George First CMS Site</title>
   <link rel="stylesheet" href="css/main.css" />
 </head>
 

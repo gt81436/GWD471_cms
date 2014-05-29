@@ -1,4 +1,32 @@
- <?php
+<?php require_once('../../config.php');?>
+<?php 
+      //get all content related to the selected page
+      $sql = "
+      SELECT *
+      FROM site_content
+      WHERE page_name='contact'";
+
+      $myData = $db->query($sql);
+
+      //create container for each piece of data
+      while($row = $myData->fetch_assoc())
+      {
+        if($row['section_name'] === 'blurb')
+        {
+          $blurb = $row['content'];
+        }
+
+        if($row['section_name'] === 'intro')
+        {
+          $intro = $row['content'];
+        }
+      }
+  ?>
+
+
+
+
+<?php
 
     if(@$_POST['submit'])
     {
@@ -62,8 +90,9 @@
   <?php $page_id = 'contact'; ?>
   <?php require_once('includes/top.php'); ?>
   <?php require_once('includes/header.php'); ?>
-    
-    <section>
+
+<p><?php echo $intro?> </p>
+   <section>
     	<h2>Contact</h2>
       
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
