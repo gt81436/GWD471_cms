@@ -38,14 +38,23 @@
 
   <?php require_once('includes/top.php');?>
   <?php require_once('includes/header.php');?>
-    <section>
-    	<h2>About Us</h2>
+    <section id="main_content">
+    	<h2>The Sneaks</h2>
+      
+       <div id="content">   
+      <p>
+        <?php echo $intro ?>
+      </p>
+      
+      </div>
+      
   <?php
     echo '<div id="products">';
+
     while($row = $myData->fetch_assoc())
     {
       echo '<div class="product">';
-      echo '<img src="" alt="" />';
+      echo '<img src="images/' . $row['photo'] . '.jpg" alt="" />';
       echo '<h3>' . $row['name'] . '</h3>';
       echo '<p>' . $row['description'] . '</p>';
       echo '<p>$' . $row['price'] . '</p>';
@@ -54,16 +63,10 @@
     echo '<br class="clear" />';
     echo '</div>'
   ?>
-      
+     
   
       
-      
-      <p>
-        <?php echo $intro ?>
-      </p>
-      <p>
-        <?php echo $blurb ?>
-      </p>
+  
     </section>
     
   <?php require_once('includes/footer.php');?>

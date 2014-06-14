@@ -1,14 +1,84 @@
+body {background-color:#252525; color:#ffffff;}
+
 #home .home_link,
 #about .about_link,
 #contact .contact_link{
-  color:red;
+  color:#e30000;
 }
 label {display:block;}
 .errors {display:block; color:red;}
-.product {width:200px; border:medium; padding:15px; float:left;}
-.product img {width: 170px; height:80px; background:#ccc;}
+.product {width:200px; border:medium; padding:15px; float:left; position:relative; left:15px;}
+.product img {width: 200px; height:120px; background:#ccc;}
 .clear {clear:both;}
 
 label, textarea, input {display:block;}
-.img1 {width:380px; height:280px; display:block; float:left;}
-.img2 {width:380px; height:280px; display:block; float:right;}
+.img1 {width:313px;height:230px; display:inline-block;  padding-right:5px; padding-left:30px;}
+.img2 {width:313px;height:230px; display:inline-block;  padding-right:5px;}
+.img3 {width:313px; height:230px; display:inline-block; padding-right:5px;}
+.img5 {width:500px; height:300px; display:block; position:absolute; top:90px; right:110px;}
+
+#main_content {margin:auto;background-color:#474747;width:1024px;padding:10px;
+    position:relative;
+    top:20px;
+    font-family:Lucida Sans Unicode;
+}
+
+.p10{
+  font-family:Lucida Sans Unicode;
+  padding-top:10px;
+  text-align:center;
+}
+  
+
+#main_nav {
+  display:block;
+  float:right;
+  position:relative;
+  right:200px;
+  bottom:20px;
+  }
+
+#main_nav a{ text-decoration:none;
+  color:#ffffff;
+  padding-left:10px;
+  font-size:20px;
+  font-family:Lucida Sans Unicode;
+}
+
+#banner{
+  font-size:62px;
+  font-family:Cooper black, Impact, Georgia;
+  color:#e30000;
+  position:relative;
+  left:280px;
+  top:20px;
+}
+
+#content{
+  padding-left:30px;
+  display:inline-block;
+  width:400px;
+  }
+
+.p2{position:absolute;
+  top:310px;
+  right:100px;
+  width:400px;
+}
+
+.comment{
+  border:none;
+  padding-left:0px;
+}
+
+h2{padding-left:30px;}
+
+.logo {width:175px;
+  height:113px;
+  display:block;
+  position:absolute;
+  left:120px;
+  top:12px;
+
+
+

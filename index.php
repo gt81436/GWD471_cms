@@ -27,16 +27,21 @@
 
   <?php require_once('includes/top.php');?>
   <?php require_once('includes/header.php');?>
-    <section>
-    	<h2>Intro</h2>
+    <section id="main_content">
+    	<h2>Three of The Best!</h2>
+      <div class="players">
         <img class='img1' src="images/kobe.jpg" alt="Kobe Bryant!" />
         <img class='img2' src="images/kevin.jpg" alt="Kevin Durant!" />
-        <p>
+        <img class='img3' src="images/lebron.jpg" alt="Lebron James"/>    
+      </div>
+      <div id="content">
+        <p class="p1">
           <?php echo $intro ?>
         </p>
-        <p>
-         <?php echo $intro ?>
+        <p class="p2">
+         <?php echo $blurb ?>
         </p>
+      </div>
     </section>
     
   <?php require_once('includes/footer.php');?>

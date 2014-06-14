@@ -91,13 +91,16 @@
   <?php require_once('includes/top.php'); ?>
   <?php require_once('includes/header.php'); ?>
 
-<p><?php echo $intro?> </p>
-   <section>
-    	<h2>Contact</h2>
-      
+
+   <section id="main_content">
+    	<h2>Contact Us</h2>
+    
+     <div id="content">
+      <p><?php echo $intro?> </p>
+    
       <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
-        <fieldset>
-          <legend>Contact Us</legend>
+        <fieldset class="comment">
+          <legend>Fill it Out</legend>
           <p>
             <label for="name">Name: </label>
             <span class="errors"><?php echo @$errors['name']; ?></span>
@@ -119,11 +122,13 @@
           </p>
           
           <p>
-            <input type="submit" value="send feedback now" name="submit" />
+            <input type="submit" value="Email Us" name="submit" />
           </p>
         </fieldset>
       </form>
        
+     <img class='img5' src="images/Allstars.png" alt="all star shoes" />
+     </div>
     </section>
     
   <?php require_once('includes/footer.php'); ?>
